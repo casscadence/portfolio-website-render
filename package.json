@@ -7,7 +7,7 @@
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\" ",
     "test": "echo \"Error: no test specified\" && exit 1",
 		"build": "npm install && npm install --prefix client && npm run build --prefix client",
-		"start": "npm run start"
+		"start": "npm start"
   },
   "keywords": [],
   "author": "",
