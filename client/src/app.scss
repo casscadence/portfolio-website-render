@@ -1,0 +1,98 @@
+$primary-color: #FC94AF;
+
+@import 'animate.css';
+
+input,
+textarea {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.loader-hidden {
+  display: none;
+}
+
+.loader-active {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 60px;
+  animation: circling 2s linear infinite, fadeOut 1s 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes circling {
+  from,
+  to {
+    transform: scaleX(1) scaleY(1);
+  }
+  10% {
+    transform: scaleX(.6) scaleY(.6);
+  }
+  15% {
+    transform: scaleX(1.8) scaleY(1.8);
+  }
+  25% {
+    transform: scaleX(1.8) scaleY(1.8);
+  }
+  32% {
+    transform: scaleX(.01) scaleY(.01);
+  }
+  85% {
+    transform: scaleX(.01) scaleY(.01);
+  }
+  90% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes flipping {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateY(359deg);
+  }
+  99% {
+    transform: rotateY(359deg);
+  }
+}
+
+@keyframes bouncing {
+  from,
+  to {
+    transform: scaleY(1);
+  }
+  10% {
+    transform: scaleY(.7) translateY(20%);
+  }
+  20% {
+    transform: scaleY(1.2) translateY(-40%);
+  }
+  30% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(.7) translateY(20%);
+  }
+  50% {
+    transform: scaleY(1.2) translateY(-40%);
+  }
+  60% {
+    transform: scaleY(1);
+  }
+  70% {
+    transform: scaleY(.7) translateY(20%);
+  }
+  80% {
+    transform: scaleY(1.2) translateY(-40%);
+  }
+  90% {
+    transform: scaleY(1);
+  }
+}

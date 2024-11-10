@@ -1,0 +1,230 @@
+@use 'sass:list';
+//^@use must be placed above all other code or you get errors
+
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Cabin&family=Oswald:wght@200..700&display=swap&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Lemon&family=Pacifico&family=Anton&family=Bangers&family=Bebas+Neue&family=Black+Han+Sans&family=Candal&family=Caveat+Brush&family=Caveat:wght@400;500;600;700&family=Changa+One:ital@0;1&family=Concert+One&family=Covered+By+Your+Grace&family=Dela+Gothic+One&family=Dokdo&family=Indie+Flower&family=Kalam:wght@300;400;700&family=Lalezar&family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Paytone+One&family=Permanent+Marker&family=Protest+Strike&family=Rammetto+One&family=Reenie+Beanie&family=Righteous&family=Titan+One&display=swap');
+
+@font-face {
+  font-family: 'Chasing Rabbits';
+  src: url('../../assets/fonts/Chasing Rabbits.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aristotelica';
+  src: url('../../assets/fonts/aristotelica.display-trial-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aristotelica';
+  src: url('../../assets/fonts/aristotelica.display-trial-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'League Spartan Semi Bold';
+  src: url('../../assets/fonts/LeagueSpartan-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$colornumber: random(2);
+$colors: deepskyblue, hotpink;
+$randomcolor: nth($colors, $colornumber);
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::selection {
+    color: white;
+    background: hotpink;
+  }
+
+  ::-webkit-scrollbar {
+    opacity: 0;
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    opacity: 0;
+    width: 0;
+  }
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-color: deepskyblue #0b0b0b;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    opacity: 0;
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    opacity: 0;
+    width: 0;
+  }
+}
+
+img {
+  user-select: none;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  ::-webkit-scrollbar {
+    opacity: 0;
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    opacity: 0;
+    width: 0;
+  }
+}
+
+.loading-container {
+}
+
+.three-wrapper {
+  background: white;
+  width: 100vw;
+  height: 100vh;
+
+  .three-about {
+    position: absolute;
+    margin: 2.5vh 2.5vw;
+    width: 45vw;
+    height: 95vh;
+    box-shadow: 0 0 0 0.1em rgba(0,0,0.1);
+
+    h1 {
+      text-transform: uppercase;
+      font-family: 'M PLUS Rounded 1c';
+      font-weight: 800;
+    }
+  }
+}
+
+.three-canvas {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.home-page {
+
+  .text-zone {
+    background: #0b0b0b;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #0b0b0b;
+    transition: background ease .2s;
+  
+    &.loader-end {
+      height: unset;
+      overflow: unset;
+    }
+  }
+}
+
+.container.about-page {
+  overflow-Y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+    .text-zone {
+      background: #0b0b0b;
+      display: flex;
+      height: 100vh;
+    }
+
+    @media (max-width: 850px) {  
+      .text-zone {
+        height: unset;
+      }
+    }
+}
+
+.container.contact-page {
+  overflow-Y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-zone {
+    .contact-wrapper {
+    }
+  }
+}
+
+.container.portfolio-page {
+  overflow-Y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+    .text-zone {
+      
+    }
+}
+
+footer {
+  font-family: 'League Spartan';
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #0b0b0b;
+  height: 50px;
+  width: 100vw;
+  text-align: center;
+  background-color: none;
+  flex: 0 0 100%;
+  margin-top: 100px;
+  display: flex;
+
+  p {
+    margin: auto;
+  }
+}
